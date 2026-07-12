@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mis-prompts": {
+      "command": "/Users/diegovilla/.nvm/versions/node/v22.21.1/bin/node",
+      "args": [
+        "/Users/diegovilla/Desktop/mcp-prompts/dist/server.js"
+      ]
+    }
+  }
+}
