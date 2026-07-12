@@ -1,9 +1,9 @@
 {
   "mcpServers": {
-    "mis-prompts": {
+    "dv-prompts": {
       "command": "/Users/diegovilla/.nvm/versions/node/v22.21.1/bin/node",
       "args": [
-        "/Users/diegovilla/Desktop/mcp-prompts/dist/server.js"
+        "/Users/diegovilla/Desktop/dv-mcp-prompts/dist/server.js"
       ]
     }
   }
