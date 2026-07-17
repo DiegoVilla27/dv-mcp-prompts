@@ -10,6 +10,7 @@ import { cabuwebDetail } from "./prompts/cabuwebDetail.js";
 import { createEcommerce } from "./prompts/createEcommerce.js";
 import { readmeGenerator } from "./prompts/readmeGenerator.js";
 import { seoPageArchitecture } from "./prompts/seoPageArchitecture.js";
+import { tsdocGenerator } from "./prompts/tsdocGenerator.js";
 
 // Inicializamos el servidor indicando que tiene la capacidad de ofrecer "prompts"
 const server = new Server(
@@ -24,7 +25,8 @@ const MIS_PROMPTS: Record<string, any> = {
   [cabuwebDetail.name]: cabuwebDetail,
   [createEcommerce.name]: createEcommerce,
   [readmeGenerator.name]: readmeGenerator,
-  [seoPageArchitecture.name]: seoPageArchitecture
+  [seoPageArchitecture.name]: seoPageArchitecture,
+  [tsdocGenerator.name]: tsdocGenerator
 };
 
 // Handler 1: Le avisa a la IA qué prompts tienes disponibles y qué variables piden
