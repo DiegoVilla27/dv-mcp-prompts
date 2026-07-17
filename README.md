@@ -23,8 +23,9 @@ The modern development landscape increasingly relies on AI agents to scaffold, a
 | 🚀 | **Automated Project Initialization** | Standardizes Next.js 15 setup with type safety, dependency injection, and local agent pipeline scripts. |
 | 🛍️ | **E-Commerce Architecture Generation** | Scaffolds Vertical-Sliced Next.js 15 e-commerce systems focusing on Web Vitals and spring animations. |
 | 🔍 | **Technical SEO & SEM Audit** | Diagnoses hydration shocks, layout shifts (CLS), and crawlability bottlenecks with code-level replacement blueprints. |
-| 🖼️ | **Persuasive Product Showcases** | Generates high-converting showcase pages leveraging the AIDA funnel framework and responsive iframe preview drawers. |
-| 📄 | **Exhaustive README Generation** | Automatically writes technical, structured, and visually compelling documentation for any codebase niche. |
+| 🖼 | **Persuasive Product Showcases** | Generates high-converting showcase pages leveraging the AIDA funnel framework and responsive iframe preview drawers. |
+| 📄 | **Exhaustive README Generation** | Automatically writes technical, structured, and visually compelling documentation for any codebase niche (supports recursive project-wide workspace analysis). |
+| 📘 | **Enterprise TSDoc Commenting** | Generates strict TSDoc comments for TypeScript interfaces, types, enums, classes, methods, and functions (supports recursive project-wide workspace analysis). |
 | 🗺️ | **Programmatic Metadata & Crawling** | Formulates dynamic SEO structures including Open Graph CTR canvases, `robots.ts`, and async `sitemap.ts`. |
 
 ---
@@ -67,7 +68,8 @@ dv-mcp-prompts/
         ├── createProject.ts        # Next.js 15 clean scaffolding and agent script pipeline prompt.
         ├── readmeGenerator.ts      # Exhaustive README.md generator prompt.
         ├── seoPageArchitecture.ts  # Technical SEO metadata, Open Graph assets, and sitemap generation prompt.
-        └── seoSemAudit.ts          # Advanced Core Web Vitals, indexation, and hydration shock audit prompt.
+        ├── seoSemAudit.ts          # Advanced Core Web Vitals, indexation, and hydration shock audit prompt.
+        └── tsdocGenerator.ts       # Enterprise-grade TSDoc comment generator prompt (for interfaces, types, classes, enums, etc.).
 ```
 
 ---

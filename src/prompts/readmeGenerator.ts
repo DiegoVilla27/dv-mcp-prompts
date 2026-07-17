@@ -4,7 +4,7 @@ export const readmeGenerator = {
   arguments: [
     {
       name: "codigo_o_estructura",
-      description: "Pega aquí el código base, los archivos de configuración (package.json) o el árbol de directorios del proyecto",
+      description: "Código base, package.json o árbol de directorios. Si tu entorno de chat tiene herramientas de sistema de archivos, puedes introducir '.' y pedirle al agente que lea todo el proyecto directamente.",
       required: true
     },
     {
@@ -24,13 +24,18 @@ To achieve the "perfect README," you must execute this process in TWO continuous
 ${notasInstalacion}
 ---
 ### 🛠️ PHASE 1: PROJECT ANALYSIS & PARSING
-Before writing the actual README, thoroughly read, parse, and analyze all configuration files, source code, and dependencies of the project that I will provide. You must identify:
+Before writing the actual README, thoroughly read, parse, and analyze all configuration files, source code, and dependencies of the project.
+
+> [!IMPORTANT]
+> **ENTIRE PROJECT SCANNING MANDATE:** If you are running in an agentic environment with access to file system or workspace tools (e.g., list_dir, grep_search, view_file, etc.), you MUST recursively search and examine the entire project workspace to build a complete mental map of the system. Do not rely solely on the provided input text if it is partial. Seek out configuration files (\`package.json\`, \`tsconfig.json\`, \`go.mod\`, \`requirements.txt\`, etc.), folder structures, and key code entry points.
+
+You must identify:
 1. The specific niche, core purpose, business/technical problem solved, and the exact runtime behavior of the application.
 2. The precise software architecture pattern (e.g., Vertical Slicing, Clean Architecture, Monolith, etc.) and its true file tree structural map.
 3. The comprehensive technology stack, extracting critical libraries and their exact semantic versions directly from the configuration files (e.g., \`package.json\`, \`go.mod\`, \`requirements.txt\`, etc.).
 4. The deterministic runtime data flow (how an action or request entry point propagates through the modules down to the final response layer).
 
-Aquí está la estructura y el código del proyecto para su análisis inmediato:
+Aquí está la estructura/información inicial provista del proyecto para su análisis:
 \`\`\`
 ${args.codigo_o_estructura}
 \`\`\`
