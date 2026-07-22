@@ -62,9 +62,15 @@ You must add complete TSDoc comment blocks to the following syntax constructs (b
 - **Getters & Setters:** Document the property behavior, validation logic, or computed values.
 - **Methods:** Document all public, protected, and private methods with full TSDoc parameter, return, and exception tags.
 
-### 4. Functions & Utility Helpers
-- **Function Signature:** Document its core logic and side effects.
-- **Parameters & Returns:** Fully list all inputs (\`@param\`), outputs (\`@returns\`), and exceptions (\`@throws\`).
+### 4. React Components, Custom Hooks & React Ecosystem Constructs
+- **React Components (Functional/Class):** Document the component's UI purpose, children/slot expectations, conditional rendering behaviors, and state dependencies. Provide \`@example\` blocks showing JSX invocation with required and optional props.
+- **Custom React Hooks (\`use*\`):** Document initial state values, configuration options, side-effects (\`useEffect\`), cleanup behaviors, lifecycle events, and exact returned tuple/object properties (states, setter functions, action handlers). Include \`@example\` blocks showing hook consumption inside functional components.
+- **React Context & Providers:** Document the context payload structure, default context value, Provider component props, and custom consumer hooks (\`useXContext\`).
+- **Refs & Imperative Handles (\`forwardRef\`, \`useImperativeHandle\`):** Document exposed imperative methods/DOM elements and ref forwarding requirements.
+
+### 5. Functions, Arrow Functions & Variable Assignments
+- **Function Declarations & Arrow Function Assignments:** Document all functions regardless of declaration style (\`function foo()\` or \`const foo = () => ...\`). Document core logic, side-effects, parameters (\`@param\`), returns (\`@returns\`), and exceptions (\`@throws\`).
+- **Variables Assigned to Hooks or Utility Calls:** Document variable declarations (\`const\`, \`let\`) assigned to hook invocations (e.g. \`const state = useHook()\`, \`const [val, setVal] = useState()\`, \`const data = useQuery()\`) or factory functions. Explain what state/data/handler the variable holds and its role in the component or module.
 - **Examples:** Provide a clear, valid \`@example\` block showcasing invocation.
 
 ---
@@ -79,9 +85,10 @@ You must add complete TSDoc comment blocks to the following syntax constructs (b
 ## 🛠️ Framework-Specific Documenting Guidelines for ${args.target_framework}
 
 * **If React / Next.js:**
-  * Document the \`Props\` interface properties in detail rather than the Component function itself.
-  * For custom hooks, document returned state arrays/objects, lifecycle dependencies, and cleanup procedures.
-  * In React Components, write a robust \`@example\` block showing how to render the component with default and edge-case props.
+  * Document the \`Props\` interface properties in detail as well as the Component function TSDoc itself.
+  * For Custom Hooks (\`use*\`), document returned state variables, action/dispatch functions, parameters, side-effect triggers (\`useEffect\`), dependencies, and cleanup behaviors.
+  * In React Components, write a robust \`@example\` block showing how to render the component with default, dynamic, and edge-case props.
+  * Document Context Providers, custom context hooks (e.g. throwing error if context is undefined), \`forwardRef\` components, and memoized components (\`React.memo\`, \`useMemo\`, \`useCallback\`).
 
 * **If Angular:**
   * Document Signals (\`signal()\`, \`computed()\`) highlighting read/write behaviors and reactive side-effects.
